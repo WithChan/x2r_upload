@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사내 파일 전송</title>
+    <style>
+        body {
+            background-color: #36393f; /* 디스코드 색상 */
+            color: white;
+            font-family: 'Unsans', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            border: 2px dashed #5865F2;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+        .btn {
+            background-color: #5865F2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn:hover { background-color: #4752c4; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>📂 파일 업로드</h2>
+        <p>사내 서버로 파일을 전송합니다.</p>
+        
+        <input type="file" id="fileInput" multiple style="margin-top: 20px;">
+        <br>
+        <button class="btn" onclick="alert('아직 서버 연결 전입니다!')">전송하기</button>
+    </div>
+
+    <script type="module">
+        import { DiscordSDK } from "https://cdn.jsdelivr.net/npm/@discord/embedded-app-sdk@1.1.0/+esm";
+        
+        // 디스코드 앱 초기화 (CLIENT_ID는 나중에 넣어도 화면은 뜸)
+        // 화면이 잘 뜨는지 확인하는 단계라 비워둬도 됩니다.
+        console.log("Discord Web View Loaded");
+    </script>
+</body>
+</html>
